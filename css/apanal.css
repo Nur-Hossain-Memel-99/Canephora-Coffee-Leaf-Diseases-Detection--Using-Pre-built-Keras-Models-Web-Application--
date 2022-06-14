@@ -1,0 +1,478 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+      
+}
+@media only screen and (min-width: 601px) {
+
+    div#newPost {
+        margin-top: 2vw;
+        margin-left: 2vw;
+    }
+    button#npbtn {
+        font-size: 1.1vw;
+        font-weight: 800;
+        margin-bottom: 0.5vw;
+    }
+    input#title {
+        width: 28vw;
+        height: 1.6vw;
+        font-size: 1vw;
+        font-weight: 800;
+        border: 0.1vw solid;
+    }    
+    textarea#wpa {
+        width: 42vw;
+        font-size: 1vw;
+        height: 10vw;
+        margin-top: 0.4vw;
+        border: 0.1vw solid;
+    }
+    div#picfileandbtn {
+        display: flex;
+        flex-direction: row;
+    }
+    input#pic {
+        font-size: 1vw;
+        width: 19vw;
+    }
+    button#npbtncancle {
+        font-size: 1vw;
+        font-weight: 800;
+    }
+    input#Blog_post {
+        font-size: 1vw;
+        font-weight: 800;
+        margin-left: 0.4vw;
+    }
+    div#buttoncancleAndSubmit {
+        margin-left: 14.9vw;
+    }
+    #adminpanalText {
+        background: #338157d1;
+        width: 100%;
+        text-align: center;
+        font-size: 2.8vw;
+        font-weight: bolder;
+        height: 7vw;
+        color: white;
+    }
+    .blogs {
+        display: flex;
+        flex-direction: column;
+        margin-left: 2vw;
+    }
+    div#showtitle {
+        font-size: 2.4vw;
+        font-weight: 800;
+        margin-bottom: 0.8vw;
+    }
+    hr {
+        margin-top: 7vw;
+        border-width: 1.5px;
+    }
+    .blogphoto {
+        width: 19vw;
+        height: 14vw;
+        margin-left: 7vw;
+        margin-top: 4vw;
+        /* background: url("../images/uploads/myimg-1640504936773.png");
+        background-repeat: no-repeat;
+        background-size: 100% 100%; */
+    }
+    #formfile{
+        display: none;
+    }
+    div#displayclumn2 {
+        position: relative;
+        left: 2vw;
+    }
+    div#show_subject {
+        font-size: 2.8vw;
+        font-weight: 800;
+    }
+    div#show_email {
+        font-style: italic;
+        position: relative;
+        top: 2vw;
+    }
+    div#show {
+        color: red;
+    }
+    .sugg_underline{
+        text-decoration: underline;
+    }
+    .btnclass {
+        background: no-repeat;
+        color: white;
+        border: none;
+        font-size: 1.8vw;
+    }
+    div#btnshow {
+        position: relative;
+        top: -1vw;
+        display: flex;
+        flex-direction: row;
+        padding-left: 2vw;
+    }
+    #update_and_delete {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        top: 6.5vw;
+        left: 77.5vw;
+        padding-bottom: 1vw;
+        width: 17vw;
+    }
+    .delete_element, .update_element {
+        position: relative;
+        width: 6vw;
+        font-weight: 800;
+        font-size: 1.0vw;
+        left: 7vw;
+    }
+    div#delete{
+        margin-right: 1vw;
+    }
+    span {
+        font-size: 1.2vw;
+    }
+    #aptx {
+        font-size: 2.1vw;
+    }
+    .btnclass_div {
+        padding-left: 1vw;
+    }
+    h1#picname {
+        font-size: 1.2vw;
+        padding-left: 7vw;
+    }
+    .show_indetail_class {
+        width: 92%;
+    }
+    div#submit {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        align-items: center;
+        width: 59.7vw;
+        justify-content: end;
+        top: 2vw;
+        padding-right: 4vw;
+    }
+    
+    button#btn_gallery, #cancle {
+        border: 0.1vw solid;
+        background: #afafaf4d;
+        margin-right: 0.4vw;
+        font-size: 1vw;
+        font-weight: 900;
+    }
+    
+    button#btn_for_show_gallery_thumbnail {
+        margin: 2vw;
+        font-size: 1vw;
+        font-weight: 800;
+        border: 0.1vw solid;
+    }
+    
+    
+    button#btn_gallery:hover,#cancle:hover,button#btn_for_show_gallery_thumbnail:hover{
+        position: relative;
+        top: 0.1vw;
+        left: 0.1vw;
+    }
+    button#btn_gallery:active,#cancle:active,button#btn_for_show_gallery_thumbnail:active{
+        position: relative;
+        top: 0.2vw;
+        left: 0.2vw;
+    }
+    
+    .btnclass:hover{
+        position: relative;
+        top: 0.1vw;
+        left: 0.1vw;
+    }
+    .btnclass:active{
+        position: relative;
+        top: 0.2vw;
+        left: 0.2vw;
+        background: black;
+    }
+    h1.picname {
+        font-size: 1.3vw;
+        position: relative;
+        left: 7vw;
+        width: 35vw;
+    }
+    .admin_box_class{
+        margin-left: 4vw;
+    }
+    p.authorinfo {
+        font-size: 1.8vw;
+    }
+    div#photos {
+        display: flex;
+        flex-direction: row;
+    }
+    #btnreport,#btnshowpicture,#btnshowAdmins,#community_navigation_btn{
+        opacity: 0.5;
+    }
+    div#show_in_dtail {
+        width: 62.4vw;
+    }
+}
+
+@media only screen and (max-width: 600px){
+
+    div#newPost {
+        margin-top: 2vw;
+        margin-left: 2vw;
+    }
+    button#npbtn {
+        font-size: 3vw;
+        font-weight: 800;
+        margin-bottom: 1.5vw;
+    }
+    input#title {
+        width: 64vw;
+        height: 4.6vw;
+        font-size: 2.7vw;
+        font-weight: 800;
+        border: 0.1vw solid;
+    }  
+    textarea#wpa {
+        width: 82vw;
+        font-size: 3vw;
+        height: 22vw;
+        margin-top: 1.5vw;
+        border: 0.1vw solid;
+    }
+    div#picfileandbtn {
+        display: flex;
+        flex-direction: row;
+        margin-top: 0.5vw;
+    }
+    input#pic {
+        font-size: 2.7vw;
+        width: 39.5vw;
+    }
+    button#npbtncancle {
+        font-size: 3vw;
+        font-weight: 800;
+        width: 16vw;
+        height: 6.5vw;
+    }
+    input#Blog_post {
+        font-size: 3vw;
+        font-weight: 800;
+        margin-left: 0.4vw;
+        width: 12vw;
+        height: 6vw;
+    }
+    div#buttoncancleAndSubmit {
+        margin-left: 14.9vw;
+    }
+
+    div#show_in_dtail {
+        width: 66%;
+    }
+    
+    
+    .alltitle{
+        font-size: 5.5vw;
+    }
+    .showindetail_ {
+        font-size: 3.3vw;
+    }
+    #adminpanalText {
+        background: #338157d1;
+        width: 100%;
+        text-align: center;
+        font-size: 2.8vw;
+        font-weight: bolder;
+        height: 14vw;
+        color: white;
+    }
+    .blogs {
+        display: flex;
+        flex-direction: column;
+        margin-left: 2vw;
+    }
+    div#showtitle {
+        font-size: 2.4vw;
+        font-weight: 800;
+        margin-bottom: 0.8vw;
+    }
+    
+    hr {
+        margin-top: 7vw;
+        border-width: 1.5px;
+    }
+    
+    .blogphoto {
+        width: 49vw;
+        height: 44vw;
+        margin-left: 4vw;
+        margin-top: 4vw;
+        margin-right: 2vw;
+    }
+    #formfile{
+        display: none;
+    }
+    
+    div#displayclumn2 {
+        position: relative;
+        left: 2vw;
+    }
+    div#show_subject {
+        font-size: 2.8vw;
+        font-weight: 800;
+    }
+    div#show_email {
+        font-style: italic;
+        position: relative;
+        top: 2vw;
+    }
+    div#show {
+        color: red;
+    }
+    
+    .sugg_underline{
+        text-decoration: underline;
+    }
+    
+    .btnclass {
+        background: no-repeat;
+        color: white;
+        border: none;
+        margin-top: 2vw;
+        font-size: 3.6vw;
+    }
+    
+    div#btnshow {
+        position: relative;
+        top: -1vw;
+        display: flex;
+        flex-direction: row;
+        padding-left: 2vw;
+    }
+    
+    #update_and_delete {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        top: 6.5vw;
+        left: 77.5vw;
+        padding-bottom: 1vw;
+        width: 20vw
+    }
+    
+    .delete_element, .update_element {
+        width: 15vw;
+        height: 6vw;
+        font-weight: 800;
+        font-size: 3vw;
+        position: relative;
+        left: 4vw;
+    }
+    div#photos {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    div#delete{
+        margin-right: 1vw;
+    }
+    
+    span {
+        font-size: 3vw;
+    }
+    .delete_author {
+        position: relative;
+        width: 33vw;
+        height: 6vw;
+        font-weight: 800;
+        font-size: 3vw;
+        left: 4vw;
+    }
+    #aptx {
+        font-size: 6vw;
+    }
+    
+    .btnclass_div {
+        padding-left: 0.2vw;
+    }
+    h1#picname {
+        font-size: 1.2vw;
+        padding-left: 7vw;
+    }
+    
+    .show_indetail_class {
+        width: 92%;
+    }
+    div#submit {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        align-items: center;
+        justify-content: end;
+        width: 65vw;
+        top: 2vw;
+        padding-right: 4vw;
+    }
+    
+    button#btn_gallery, #cancle {
+        border: 0.1vw solid;
+        background: #afafaf4d;
+        margin-right: 0.4vw;
+        font-size: 3vw;
+        font-weight: 800;
+    }
+    
+    button#btn_for_show_gallery_thumbnail {
+        font-size: 3vw;
+        font-weight: 800;
+        border: 0.1vw solid;
+        margin: 2vw;
+        height: 7vw;
+    }
+    
+    
+    button#btn_gallery:hover,#cancle:hover,button#btn_for_show_gallery_thumbnail:hover{
+        position: relative;
+        top: 0.1vw;
+        left: 0.1vw;
+    }
+    button#btn_gallery:active,#cancle:active,button#btn_for_show_gallery_thumbnail:active{
+        position: relative;
+        top: 0.2vw;
+        left: 0.2vw;
+    }
+    
+    .btnclass:hover{
+        position: relative;
+        top: 0.1vw;
+        left: 0.1vw;
+    }
+    .btnclass:active{
+        position: relative;
+        top: 0.2vw;
+        left: 0.2vw;
+        background: black;
+    }
+    h1.picname {
+        font-size: 3.3vw;
+        position: relative;
+        left: 7vw;
+        width: 84vw;
+    }
+    p.authorinfo {
+        font-size: 3vw;
+    }
+    #btnreport,#btnshowpicture,#btnshowAdmins,#community_navigation_btn{
+        opacity: 0.5;
+    }
+}

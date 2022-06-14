@@ -1,0 +1,167 @@
+
+
+@media only screen and (min-width: 601px) {
+    .alink {
+        font-size: 1.89vw;
+        margin-right: 2vw;
+        padding-top: 1vw;
+    }
+    #NeviGationbarContainer {
+        /* background: #5e3131; */
+        background: #338157d1;
+        /* background: #033419eb; */
+        display: flex;
+        flex-direction: row;
+        height: 4.5vw;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+        transition: 1s linear;
+    }
+    body{
+        padding: 0;
+        margin: 0;
+    }
+    #icon {
+        width: 2vw;
+        height: 2vw;
+        margin-top: 0.49vw;
+        margin-right: 2vw;
+        margin-left: 1vw;
+        background: url("../images/coffee\ leaf\ deseasies\ detection.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    
+    a:hover{
+        position: relative;
+        top: 0.1vw;
+        left: 0.1vw;
+        border-bottom: 0.18vw solid white;
+        border-radius: .2vw;
+    }
+    
+    a:active{
+        position: relative;
+        top: 0.15vw;
+        left: 0.15vw;
+    }
+    #navigation_right{
+        display: none;
+    }
+    div#userprofile {
+        position: absolute;
+        left: 90vw;
+        top: 0.2vw;
+    }
+    #img_id_for_user {
+        width: 3.4vw;
+        height: 3.4vw;
+        border: 0.3vw solid white;
+        border-radius: 3vw;
+    }
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+    .alink {
+        font-size: 3.7vw;
+        margin-right: 2.6vw;
+        padding-top: 3.6vw;
+    }
+    #NeviGationbarContainer {
+        /* background: #5e3131; */
+        background: #338157d1;
+        /* background: #033419eb; */
+        display: flex;
+        flex-direction: row;
+        height: 11.5vw;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+        transition: 1s linear;
+    }
+    body{
+        padding: 0;
+        margin: 0;
+    }
+    #icon {
+        width: 6vw;
+        height: 7vw;
+        margin-top: 0.3vw;
+        margin-right: 2vw;
+        margin-left: 1vw;
+        background: url("../images/coffee\ leaf\ deseasies\ detection.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    
+    a:hover{
+        position: relative;
+        top: 0.1vw;
+        left: 0.1vw;
+        border-bottom: 0.18vw solid white;
+        border-radius: .2vw;
+    }
+    
+    a:active{
+        position: relative;
+        top: 0.15vw;
+        left: 0.15vw;
+    }
+    #dots {
+        display: flex;
+        flex-direction: column;
+        width: 18vw;
+        align-items: end;
+    }
+    .dotclass {
+        width: 4vw;
+        height: 0.7vw;
+        margin: 0.4vw;
+        background: white;
+        position: relative;
+        top: 2.5vw;
+        transition: width .7s;
+    }
+
+    .dot{
+        width: 7vw;
+    }
+
+    #navigation_right {
+        background: #338157d1;
+        position: absolute;
+        width: 40vw;
+        height: 60vw;
+        top: 12vw;
+        left: 59.2%;
+        z-index: 10;
+        opacity: 0;
+        transition: opacity 1s;
+    }
+    .opacity{
+        opacity: 1;
+    }
+    .alinkr{
+        text-align: end;
+    }
+    div#userprofile, div#Community {
+        display: none;
+    }
+    img#img_id_for_user_navi_R {
+        width: 10.4vw;
+        height: 10.4vw;
+        border: 0.4vw solid;
+        border-radius: 10vw;
+        position: relative;
+        top: -53vw;
+        left: 2vw;
+    }
+  }

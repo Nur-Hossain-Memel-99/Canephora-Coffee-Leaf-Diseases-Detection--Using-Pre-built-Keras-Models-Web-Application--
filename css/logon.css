@@ -1,0 +1,87 @@
+@media only screen and (min-width: 601px) {
+    html,body,#form_container,form{
+        margin: 0;
+        padding: 0;
+        height: 100%;
+    }
+    
+    form {
+        font-size: 1.2vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    input {
+        font-size: 1.1vw;
+        font-weight: 800;
+        margin-bottom: 0.3vw;
+        border: 0.2vw solid;
+        width: 22vw;
+    }
+    h1 {
+        font-size: 1.8vw;
+        font-weight: 800;
+    }
+    
+    button#btn {
+        font-size: 1.2vw;
+        font-weight: 800;
+        position: relative;
+        left: 8vw;
+        border: 0.1vw solid;
+    }
+    input#picture {
+        border: none;
+    }
+    
+    body{
+        background: url("../images/backgroundimages/pexels-pixabay-235994.jpg");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+}
+@media only screen and (max-width: 600px) {
+    html,body,#form_container,form{
+        margin: 0;
+        padding: 0;
+        height: 100%;
+    }
+    
+    form {
+        font-size: 3vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    input {
+        font-size: 3.5vw;
+        font-weight: 800;
+        margin-bottom: 1.3vw;
+        border: 0.2vw solid;
+        width: 72vw;
+    }
+    h1 {
+        font-size: 6.8vw;
+        font-weight: 800;
+    }
+    
+    button#btn {
+        font-size: 3.2vw;
+        font-weight: 800;
+        position: relative;
+        left: 28.7vw;
+        border: 0.1vw solid;
+    }
+    input#picture {
+        border: none;
+    }
+    body{
+        background: url("../images/backgroundimages/pexels-pixabay-235994.jpg");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+}

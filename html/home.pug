@@ -1,0 +1,130 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        title Robust Ditection
+        link(rel="shortcut icon" href="../images/coffee\ leaf\ deseasies\ detection.png") 
+        style 
+            include ../css/home.css
+            include ../css/footer.css
+            include ../css/navigation.css
+    body
+        -var user='null'
+        -var Pass='null'
+        -if(mail)
+            -user=mail
+        -if(Password)
+            -Pass=Password
+        div(id='userprofile' onclick="window.location='/userprofile'")
+            img(id="img_id_for_user" src=userpic)
+
+        div(id='navigation_right' style='display:none') 
+            .alinkr.alink
+                a(href="/?username="+user+"&Password="+Pass) Home 
+            .alinkr.alink
+                a(href="/about?username="+user+"&Password="+Pass) About
+            .alinkr.alink
+                a(href="/checkde?username="+user+"&Password="+Pass) Check-Leaf
+            .alinkr.alink
+                a(href="/bloge?username="+user+"&Password="+Pass) Blog
+            .alinkr.alink 
+                a(href="/community?username="+user+"&Password="+Pass) Community
+            .alinkr.alink
+                a(href="/contactus?username="+user+"&Password="+Pass) Report
+            .alinkr.alink
+                a(href="/userprofile?username="+user+"&Password="+Pass) User LogIn
+            #profilePic   
+                img(id="img_id_for_user_navi_R" src=userpic)
+
+        #NeviGationbarContainer
+            #icon.alink
+            #home.alink
+                a(href="/?username="+user+"&Password="+Pass) Home
+            #about.alink
+                a(href="/about?username="+user+"&Password="+Pass) About
+            #Checkdecission.alink
+                a(href="/checkde?username="+user+"&Password="+Pass) Check-Leaf
+            #blg.alink
+                a(href="/bloge?username="+user+"&Password="+Pass) Blog
+            #Community.alink 
+                a(href="/community?username="+user+"&Password="+Pass) Community
+            #contactUS.alink 
+                a(href="/contactus?username="+user+"&Password="+Pass) Report
+            
+            #dots
+                div(id='dot1' class='dotclass' onclick='toggle_hide_navigation()')
+                div(id='dot2' class='dotclass' onclick='toggle_hide_navigation()') 
+                div(id='dot3' class='dotclass' onclick='toggle_hide_navigation()')
+                div(id='dot4' class='dotclass' onclick='toggle_hide_navigation()')
+        #maincontainer 
+            #welcoeAndImage 
+                #welcontainer
+                    #welcome
+                        #wel
+                            h1 Welcome 
+                        #weltitle
+                            h1 To Robusta Coffee Leaf Disease Detection 
+                        #welcomeMessage
+                            p This is a platform for coffee researcher's farmers enthusiast to detect Robusta Coffee Leaf Diseases. A friendly interface to keep connection with the community and updated with the latest articles. The most common robusta plant diseases namely Redmite, Leaf-Rust diseases will be detected in this work. The Rust will 5 level which will define how much affected the leaf is. Clear images of affected coffee leaf with white background will be better for input. After necessary pre-processing, the dataset will be trained using Keras applications. After that the website will detect the diseases and give a simple suggestion to prevent the disease.
+                            .cdi 
+                                a(href="/checkde" id='ckln') Check Coffee leaf
+                #image
+            #CalculationAndVideo 
+                #Videoslowmo
+                    video(autoplay muted loop src="../images/coffee\ leaf\ deseasies\ detection.mp4" type="video/mp4" id="video")
+
+
+        #gallery   
+            #imageshow_div 
+                -if(pic[0])
+                    img(src=pic[0].name alt="" id="image_show_container") 
+            #section_container 
+                #font_gallery 
+                    h1#galleryfont Gallery 
+                #all_images_container 
+                    -var i= 0
+                    each n in pic.reverse()
+                        div(id="pic_id"+i class='pic_class')
+                            img(src=n.name id="pic"+i class="img_class" value=n.name onclick="kkk(this.value,"+i+")")
+                        -i=i+1
+
+
+        #footer
+            #row
+                #blogs(onclick="location.href='/bloge'")
+                    #blogcon 
+                        h1 Blogs
+                    #first3blogs
+                        -var flag=0
+                        each n in records.reverse()
+                            span=n.title
+                            -flag=flag+1
+                            if(flag==3)
+                                -break
+                            else 
+                #contus 
+                    #contcon
+                        h1 Contact US
+                    #info1 
+                        h1 chillofficialop@gmail.com
+                    #info2 
+                        h1 +8801400298344
+                    #info3
+                        h1 +8801989890916
+                #fllowus
+                    #flus
+                        h1 Follow US  
+                        //- edit link
+                    #icon1.ic(onclick="location.href='https://twitter.com/LeafRobust'")  
+                    #icon2.ic(onclick="location.href='https://www.linkedin.com/in/robusta-coffee-leaf-disease-detection-a03633231'")
+                    #icon3.ic(onclick="location.href='https://www.instagram.com/invites/contact/?i=ww811g5p6egd&utm_content=nxqvycp'")
+                    #icon4.ic(onclick="location.href='https://www.facebook.com/Robust-Coffee-Leaf-Disease-Detection-110733434487077/?ref=pages_you_manage'")
+            #copyrigth 
+                h1#reserves All right reserve's to ::chillofficialop@gmail.com ::2022
+        script 
+            include ../js/home.js
+            include ../js/dots.js
+
+

@@ -1,0 +1,160 @@
+
+@media only screen and (min-width: 601px) {
+    #footer {
+        background: linear-gradient(#338157d1 , #338157d1);
+        width: 100%;
+        height: 13vw;
+        display: flex;
+        flex-direction: column;
+    }
+    #row{
+        display: flex;
+        flex-direction: row;
+    }
+
+    #blog1, #blog2, #blog3, #info1, #info2, #info3 {
+        width: 100%;
+        height: 5%;
+        font-size: 0.7vw;
+    }
+    #blogs ,#contus , #fllowus{
+        color: white;
+        font-size: 1vw;
+        text-align: center;
+        width: 33%;
+        height: 13vw;
+    }
+
+    .ic {
+        width: 3vw;
+        border-radius: 3vw;
+        height: 3vw;
+    }
+    div#icon1 {
+        position: relative;
+        top: 0vw;
+        left: 13vw;
+        background: url("../images/icon/twitter.gif");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    div#icon2 {
+        position: relative;
+        top: -3vw;
+        left: 17vw;
+        background: url("../images/icon/linkdin.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    div#icon3 {
+        position: relative;
+        top: -2vw;
+        left: 13vw;
+        background: url("../images/icon/instagram.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    div#icon4 {
+        position: relative;
+        top: -5vw;
+        left: 17vw;
+        background: url("../images/icon/facebook.gif");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    div#copyrigth {
+        color: white;
+        font-size: .6vw;
+        width: 50%;
+        text-align: center;
+        height: 1.5vw;
+        position: relative;
+        top: -3.9vw;
+        left: 24.5vw;
+    }
+
+    #first3blogs {
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media only screen and (max-width: 600px) {
+    #footer {
+        background: linear-gradient(#338157d1 , #338157d1);
+        width: 100%;
+        height: 26vw;
+        display: flex;
+        flex-direction: column;
+    }
+    #row{
+        display: flex;
+        flex-direction: row;
+    }
+
+    #blog1, #blog2, #blog3, #info1, #info2, #info3 {
+        width: 100%;
+        height: 8%;
+        font-size: 1.14vw;
+    }
+    #blogs ,#contus , #fllowus{
+        color: white;
+        font-size: 1.6vw;
+        text-align: center;
+        width: 33%;
+        height: 15.8vw;
+    }
+
+    .ic {
+        width: 4vw;
+        border-radius: 3vw;
+        height: 4vw;
+    }
+    div#icon1 {
+        position: relative;
+        top: 0vw;
+        left: 12vw;
+        background: url("../images/icon/twitter.gif");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    div#icon2 {
+        position: relative;
+        top: -4vw;
+        left: 17vw;
+        background: url("../images/icon/linkdin.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    div#icon3 {
+        position: relative;
+        top: -3vw;
+        left: 12vw;
+        background: url("../images/icon/instagram.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    div#icon4 {
+        position: relative;
+        top: -7vw;
+        left: 17vw;
+        background: url("../images/icon/facebook.gif");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    div#copyrigth {
+        color: white;
+        font-size: .6vw;
+        width: 50%;
+        text-align: center;
+        height: 1.5vw;
+        position: relative;
+        top: 3vw;
+        left: 25vw;
+    }
+
+    #first3blogs {
+        display: flex;
+        flex-direction: column;
+        font-size: 2vw;
+    }
+}

@@ -1,0 +1,110 @@
+
+@media only screen and (min-width: 601px) {
+    div#blogsFD {
+        position: relative;
+        top: 2vw;
+        left: 2vw;
+        display: flex;
+        flex-direction: column;
+        width: 97%;
+    }
+    hr {
+        margin-top: 3vw;
+    }
+    
+    div#dis {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 5vw;
+    }
+    div#showtitle {
+        font-size: 3.8vw;
+        font-weight: 800;
+    }
+    div#show_in_dtail {
+        margin-top: 1vw;
+        font-size: 1.4vw;
+        width: 50%;
+    }
+    
+    div#photos {
+        margin-top: 1vw;
+        width: 47%;
+    }
+    .blgimages {
+        width: 35vw;
+        height: 24vw;
+        margin-left: 7vw;
+    }
+    
+    #home,#about,#Checkdecission,#contactUS,#Community{
+        opacity: .5;
+        font-size: 1.9vw;
+    }
+    
+    body{
+        width: 100%;
+        background:url('../images/backgroundimages/home.jpg');
+        background-repeat: repeat-y;
+        background-size: 100%;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    div#blogsFD {
+        position: relative;
+        top: 2vw;
+        left: 2vw;
+        display: flex;
+        flex-direction: column;
+        width: 98vw;
+    }
+    hr {
+        margin-top: 3vw;
+    }
+    
+    div#dis {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 5vw;
+    }
+    div#showtitle {
+        font-size: 4.8vw;
+        font-weight: 800;
+        font-style: italic;
+    }
+    div#show_in_dtail {
+        margin-top: 1vw;
+        font-size: 3.3vw;
+        width: 50%;
+    }
+    
+    div#photos {
+        margin-top: 1vw;
+        width: 50%;
+    }
+    .blgimages {
+        width: 35vw;
+        height: 24vw;
+        margin-left: 7vw;
+    }
+    
+    
+    body{
+        width: 100%;
+        background:url('../images/backgroundimages/home.jpg');
+        background-repeat: repeat-y;
+        background-size: 100%;
+    }
+    
+    #home,#about,#Checkdecission,#contactUS,#Community{
+        opacity: .5;
+        font-size:3.2vw ;
+        display: inline-block;
+    }
+    #blg{
+        color: white;
+        opacity: 1;
+    }
+}
+

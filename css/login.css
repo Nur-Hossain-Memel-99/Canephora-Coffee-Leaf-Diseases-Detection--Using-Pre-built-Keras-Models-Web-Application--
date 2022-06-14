@@ -1,0 +1,162 @@
+
+
+
+@media only screen and (min-width: 601px) {
+    html,body{
+        margin: 0;
+        padding: 0;
+        height: 100%;
+    }
+    
+    #logcon {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    #bckpic{
+        width:55% ;
+        height: 100%;
+        background: url("../images/loginpi/bg-01.jpg");
+        background-size: 100% 100%;
+        background-repeat: no-repeat
+    }
+    
+    
+    #login {
+        width: 45%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    input#aname {
+        border: 0.2vw solid;
+        width: 20vw;
+        font-size: 1.2vw;
+    }
+    
+    
+    input#apass {
+        border: 0.2vw solid;
+        font-size: 1.2vw;
+        width: 20vw;
+        margin-top: 0.6vw;
+    }
+    
+    
+    #btn {
+        border: 0.2vw solid;
+        margin-top: 0.6vw;
+        background: #00000021;
+        font-size: 1vw;
+        font-weight: 800;
+    }
+    
+    #btn:active {
+        position: relative;
+        top: 0.2vw;
+        left: 0.2vw;
+    }
+    
+    div#idc {
+        width: 73%;
+        text-align: end;
+    }
+    div#logontitale {
+        font-size: 2vw;
+        font-weight: 800;
+    }
+    #valid_invalid{
+        color: red;
+        font-size: 0.8vw;
+        position: relative;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    html,body{
+        margin: 0;
+        padding: 0;
+        height: 100%;
+    }
+    
+    #logcon {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    #bckpic{
+        width:55% ;
+        height: 100%;
+        background: url("../images/loginpi/bg-01.jpg");
+        background-size: 100% 100%;
+        background-repeat: no-repeat
+    }
+    
+    
+    #login {
+        width: 45%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    input#aname {
+        border: 0.2vw solid;
+        width: 35vw;
+        font-size: 2.5vw;
+        height: 3vw;
+    }
+    
+    
+    input#apass {
+        border: 0.2vw solid;
+        font-size: 2.5vw;
+        width: 35vw;
+        margin-top: 1vw;
+        height: 3vw;
+    }
+    
+    
+    #btn {
+        border: 0.2vw solid;
+        margin-top: 1vw;
+        background: #00000021;
+        font-size: 2.5vw;
+        font-weight: 800;
+    }
+    
+    #btn:active {
+        position: relative;
+        top: 0.2vw;
+        left: 0.2vw;
+    }
+    
+    div#idc {
+        width: 90%;
+        text-align: end;
+    }
+    div#logontitale {
+        font-size: 4vw;
+        font-weight: 800;
+    }
+    #valid_invalid {
+        color: red;
+        font-size: 2vw;
+        position: relative;
+        text-align: center;
+    }
+    div#idd {
+        font-size: 2vw;
+    }
+}
+

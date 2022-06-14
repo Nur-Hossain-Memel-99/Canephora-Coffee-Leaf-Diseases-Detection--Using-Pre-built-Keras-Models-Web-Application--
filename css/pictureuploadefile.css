@@ -1,0 +1,451 @@
+
+
+@media only screen and (min-width: 601px) {
+  .drop-zone {
+    margin-left: 36vw;
+    margin-top: 1.7vw;
+    max-width: 22vw;
+    height: 19vw;
+    padding: 0.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 700;
+    font-size: 1.2vw;
+    cursor: pointer;
+    color: #cccccc;
+    border: 4px dashed #009578;
+    border-radius: 10px;
+  }
+
+
+  .drop-zone--over {
+    border-style: solid;
+  }
+
+  .drop-zone__input {
+    display: none;
+  }
+
+  .drop-zone__thumb {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #cccccc;
+    background-size: cover;
+    position: relative;
+  }
+
+  .drop-zone__thumb::after {
+    content: attr(data-label);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px 0;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.75);
+    font-size: 14px;
+    text-align: center;
+  }
+  #btn {
+    position: relative;
+    top: 2vw;
+    left: 50vw;
+    font-size: 1.2vw;
+    font-weight: bolder;
+  }
+
+  #container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .contain{
+    padding-left: 2.8vw;
+    font-size: 1.4vw;
+    font-weight: 800;
+    display: flex;
+    flex-direction: row;
+  }
+
+  div#dragAdnDropArea {
+    padding-bottom: 5vw;
+  }
+
+
+
+  .picclass {
+    width: 26vw;
+    height: 21vw;
+  }
+
+  .fontedit {
+    width: 33%;
+  }
+  div#Check_Model {
+    padding-top: 10vw;
+  }
+  div#checkModelFont {
+    width: 40%;
+    height: 17vw;
+    display: flex;
+    align-items: center;
+  }
+
+  div#checkModelAnimation {
+    width: 44%;
+    height: 17vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -1vw;
+  }
+
+  div#processpercentageContainer {
+    width: 100%;
+    height: 3vw;
+    border: 0.19vw solid;
+    border-radius: 3vw;
+  }
+  #processpercentage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3vw;
+    height: 100%;
+  }
+
+  #lineOne{
+    width: 100%;
+    height: 0.0001vw;
+    background: black;
+    border: 0.1vw solid;
+  } 
+  #lineTwo{
+    width: 100%;
+    border: 0.1vw dotted;
+    /* animation: border-dance 4s infinite linear; */
+  } 
+  /* #lineThree{
+    width: 100%;
+    border: 0.1vw dotted;
+    animation: border-dance 4s infinite linear;
+  } */
+  #lineThree {
+    width: 100%;
+    /* background: linear-gradient(90deg, rgb(0, 0, 0) 50%, transparent 50%); */
+    background: linear-gradient(260deg, black , transparent 60%);
+    background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+    background-size: 15px 4px, 15px 4px, 4px 15px, 4px 15px;
+    background-position: 0px 0px, 200px 100px, 0px 100px, 200px 0px;
+  
+    padding: 10px;
+    animation: border-dance 4s infinite linear;
+  }
+  @keyframes border-dance {
+    0% {
+      background-position: 0px 0px, 300px 116px, 0px 150px, 216px 0px;
+    }
+    100% {
+      background-position: 300px 0px, 0px 116px, 0px 0px, 216px 150px;
+    }
+  }
+
+  div#checkFinalDisease {
+    display: flex;
+    align-items: center;
+  }
+
+  #checkDiseaseAnimation {
+    width: 44%;
+    height: 17vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -1vw;
+    padding-left: 18vw;
+  }
+  #Finding_Disease_Container{
+    width: 100%;
+    height: 3vw;
+    border: 0.19vw solid;
+    border-radius: 3vw;
+  }
+  #processpercentage2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3vw;
+    height: 100%;
+  }
+
+  div#result {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 13vw;
+  }
+  div#showDisease {
+    padding-left: 8vw;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 4vw;
+  }
+  #your_image, #your_modified_pic, #your_modified_pic2, #Check_Model, #Finding_Disease, #Result, #Solution{
+    display: none;
+  }
+
+  div#waiting_message {
+    color: red;
+    justify-content: center;
+    margin-left: 23vw;
+    position: relative;
+    top: -5vw;
+    transition: 1s;
+  }
+
+  #home,#about,#blg,#contactUS,#Community{
+    opacity: .5;
+    font-size: 1.9vw;
+  }
+
+  body{
+    background:url('../images/backgroundimages/cool-background.png');
+    background-repeat: repeat-y;
+    background-size: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px){
+  .drop-zone {
+    margin-left: 28vw;
+    margin-top: 1.7vw;
+    max-width: 44vw;
+    height: 59vw;
+    padding: 0.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 700;
+    font-size: 3.3vw;
+    cursor: pointer;
+    color: #cccccc;
+    border: 4px dashed #009578;
+    border-radius: 10px;
+  }
+
+  .drop-zone--over {
+    border-style: solid;
+  }
+
+  .drop-zone__input {
+    display: none;
+  }
+
+  .drop-zone__thumb {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #cccccc;
+    background-size: cover;
+    position: relative;
+  }
+
+  .drop-zone__thumb::after {
+    content: attr(data-label);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px 0;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.75);
+    font-size: 14px;
+    text-align: center;
+  }
+  #btn {
+    position: relative;
+    top: 2vw;
+    left: 46vw;
+    font-size: 3vw;
+    font-weight: bolder;
+}
+
+  #container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .contain{
+    padding-left: 2.8vw;
+    font-size: 1.4vw;
+    font-weight: 800;
+    display: flex;
+    flex-direction: row;
+  }
+
+  div#dragAdnDropArea {
+    padding-bottom: 5vw;
+    }
+
+
+
+  .picclass {
+    width: 26vw;
+    height: 21vw;
+  }
+
+  .fontedit {
+    width: 33%;
+  }
+  div#Check_Model {
+    padding-top: 10vw;
+  }
+  div#checkModelFont {
+    width: 40%;
+    height: 17vw;
+    display: flex;
+    align-items: center;
+  }
+
+  div#checkModelAnimation {
+    width: 44%;
+    height: 17vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -1vw;
+  }
+
+  div#processpercentageContainer {
+    width: 100%;
+    height: 3vw;
+    border: 0.19vw solid;
+    border-radius: 3vw;
+  }
+  #processpercentage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3vw;
+    height: 100%;
+  }
+
+  #lineOne{
+    width: 98%;
+    height: 0.0001vw;
+    background: black;
+    border: 0.1vw solid;
+  } 
+  #lineTwo{
+    width: 98%;
+    border: 0.1vw dotted;
+  } 
+
+  #lineThree {
+    width: 93%;
+    background: linear-gradient(260deg, black , transparent 60%);
+    background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+    background-size: 15px 4px, 15px 4px, 4px 15px, 4px 15px;
+    background-position: 0px 0px, 200px 100px, 0px 100px, 200px 0px;
+  
+    padding: 10px;
+    animation: border-dance 4s infinite linear;
+  }
+  @keyframes border-dance {
+    0% {
+      background-position: 0px 0px, 300px 116px, 0px 150px, 216px 0px;
+    }
+    100% {
+      background-position: 300px 0px, 0px 116px, 0px 0px, 216px 150px;
+    }
+  }
+
+  div#checkFinalDisease {
+    display: flex;
+    align-items: center;
+  }
+
+  #checkDiseaseAnimation {
+    width: 44%;
+    height: 17vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -1vw;
+    padding-left: 18vw;
+  }
+  #Finding_Disease_Container{
+    width: 100%;
+    height: 3vw;
+    border: 0.19vw solid;
+    border-radius: 3vw;
+  }
+  #processpercentage2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3vw;
+    height: 100%;
+  }
+
+  div#result {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 13vw;
+  }
+  div#showDisease {
+    padding-left: 8vw;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 4vw;
+  }
+  #your_image, #your_modified_pic, #your_modified_pic2, #Check_Model, #Finding_Disease, #Result, #Solution{
+    display: none;
+  }
+
+  div#waiting_message {
+    color: red;
+    justify-content: center;
+    margin-left: 23vw;
+    position: relative;
+    top: -5vw;
+    transition: 1s;
+  }
+
+  #home,#about,#blg,#contactUS{
+    opacity: .5;
+    font-size:3.2vw ;
+    display: inline-block;
+  }
+  #Checkdecission{
+    color: white;
+    opacity: 1;
+  }
+
+  body{
+    background:url('../images/backgroundimages/cool-background.png');
+    background-repeat: repeat-y;
+    background-size: 100%;
+  }
+}

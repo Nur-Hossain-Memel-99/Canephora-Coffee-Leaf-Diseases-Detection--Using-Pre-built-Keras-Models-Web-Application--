@@ -1,0 +1,132 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        title Check Leaves
+        link(rel="shortcut icon" href="../images/coffee\ leaf\ deseasies\ detection.png") 
+        style 
+            include ../css/pictureuploadefile.css
+            include ../css/navigation.css
+    body 
+        -var user='null'
+        -var Pass='null'
+        -if(mail)
+            -user=mail
+        -if(Password)
+            -Pass=Password
+        div(id='userprofile' onclick="window.location='/userprofile'")
+            img(id="img_id_for_user" src=userpic)
+
+        div(id='navigation_right' style='display:none') 
+            .alinkr.alink
+                a(href="/?username="+user+"&Password="+Pass) Home 
+            .alinkr.alink
+                a(href="/about?username="+user+"&Password="+Pass) About
+            .alinkr.alink
+                a(href="/checkde?username="+user+"&Password="+Pass) Check-Leaf
+            .alinkr.alink
+                a(href="/bloge?username="+user+"&Password="+Pass) Blog
+            .alinkr.alink 
+                a(href="/community?username="+user+"&Password="+Pass) Community
+            .alinkr.alink
+                a(href="/contactus?username="+user+"&Password="+Pass) Report
+            .alinkr.alink
+                a(href="/userprofile?username="+user+"&Password="+Pass) User LogIn
+            #profilePic   
+                img(id="img_id_for_user_navi_R" src=userpic)
+
+        #NeviGationbarContainer
+            #icon.alink
+            #home.alink
+                a(href="/?username="+user+"&Password="+Pass) Home
+            #about.alink
+                a(href="/about?username="+user+"&Password="+Pass) About
+            #Checkdecission.alink
+                a(href="/checkde?username="+user+"&Password="+Pass) Check-Leaf
+            #blg.alink
+                a(href="/bloge?username="+user+"&Password="+Pass) Blog
+            #Community.alink 
+                a(href="/community?username="+user+"&Password="+Pass) Community
+            #contactUS.alink 
+                a(href="/contactus?username="+user+"&Password="+Pass) Report
+
+            #dots
+                div(id='dot1' class='dotclass' onclick='toggle_hide_navigation()')
+                div(id='dot2' class='dotclass' onclick='toggle_hide_navigation()') 
+                div(id='dot3' class='dotclass' onclick='toggle_hide_navigation()')
+                div(id='dot4' class='dotclass' onclick='toggle_hide_navigation()')
+
+
+        #dragAdnDropArea 
+            form(method="post" onSubmit="return aleart(event)" name="logonform" enctype="multipart/form-data") 
+                .drop-zone
+                    span(class="drop-zone__prompt") Drop file here or click to upload
+                    input(type="file" name="myFile" class="drop-zone__input" id="picc")
+                #submit
+                    button(id="btn") Submitt
+        #container
+            #lineOne 
+            #lineTwo 
+            #lineThree
+            #your_image.contain
+                #font1.fontedit
+                    h1 Your Image
+                #Y_image_load 
+                    img(src="" alt="" id="pickk" class="picclass")
+            #your_modified_pic.contain 
+                #font2.fontedit
+                    h1 Process Image
+                #y_modified_image_loade
+                    img(src="" alt="" id="pickk2" class="picclass")
+            #your_modified_pic2.contain
+                #font3.fontedit
+                    h1 Final Process 
+                #y_modified_pic_2
+                    img(src="" alt="" id="pickk3" class="picclass")
+            #Check_Model.contain
+                #checkModelFont
+                    h1 Checking Model
+                #checkModelAnimation
+                    #percentage_show 0%
+                    #processpercentageContainer
+                        #processpercentage
+
+            #waiting_message.contain
+                h1(id="waiting_message_show_container")
+
+            #Finding_Disease.contain 
+                #checkFinalDisease
+                    h1 checking Disease
+                #checkDiseaseAnimation
+                    #percentage_show2 0%
+                    #Finding_Disease_Container
+                        #processpercentage2
+            #Result.contain
+                #resulttxt 
+                    h1 Disease / No Disease
+                #showDisease
+                    #DiseaseResult
+                        span#disease_result__text_show 
+                    #Suggest_the_solution
+                        span#suggest_the_solution_text_show 
+                    #visite_link_div
+                        a(id='visite_link')
+            #Solution
+
+
+        script 
+            include ../js/checkdes.js
+            include ../js/sub.js
+            include ../js/dots.js
+        script(src="//cdn.jsdelivr.net/npm/sweetalert2@10")
+        script(src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous") 
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous")
+        script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous") 

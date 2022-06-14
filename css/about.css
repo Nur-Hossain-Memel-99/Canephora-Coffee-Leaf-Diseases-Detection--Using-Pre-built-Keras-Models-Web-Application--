@@ -1,0 +1,154 @@
+
+
+@media only screen and (min-width: 601px) {
+    #Abstract {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+    #abs{
+        width: 60%;
+        height: 100%;
+    }
+    #pictureicon{
+        width: 40%;
+        height: 35vw;
+        background: url("../images/About/pngwing.com.png");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        position: relative;
+        top: 4vw;
+    }
+    div#absw {
+        padding-left: 3vw;
+        font-size: 2vw;
+        height: 4.5vw;
+    }
+    div#fullabs {
+        font-size: 1.8vw;
+        padding-left: 6vw;
+    }
+    #FullWp {
+        width: 79%;
+        font-size: 1.8vw;
+        padding-left: 6vw;
+    }
+    #workingprincipal{
+        width: 100%;
+        height: 30vw;
+    }
+    #WpW {
+        padding-left: 3vw;
+        font-size: 2vw;
+        height: 4.5vw;
+    }
+    
+    #svname, .authorname {
+        font-size: 1vw;
+        padding-left: 4vw;
+    }
+    #svMail, .authormail {
+        font-size: 1.2vw;
+        padding-left: 6vw;
+        position: relative;
+        top: -1vw;
+    }
+    #suw{
+        padding-left: 3vw;
+        font-size: 2vw;
+        height: 4.5vw;
+    }
+    
+    #home,#Checkdecission,#blg,#contactUS,#Community{
+        opacity: .5;
+        font-size: 1.9vw;
+    }
+    
+    body{
+        background:url('../images/backgroundimages/cool-background.png');
+        background-repeat: repeat-y;
+        background-size: 100%;
+      }
+}
+
+
+@media only screen and (max-width: 600px){
+    #Abstract {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+    #abs{
+        width: 55%;
+        height: 100%;
+    }
+    #pictureicon {
+        width: 44%;
+        height: 65vw;
+        background: url(../images/About/pngwing.com.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        position: relative;
+        top: 6vw;
+    }
+    div#absw {
+        font-style: italic;
+        padding-left: 3vw;
+        font-size: 3.5vw;
+        height: 0.5vw;
+    }
+    div#fullabs {
+        margin-top: 8vw;
+        font-size: 3.3vw;
+        padding-left: 6vw;
+    }
+    #workingprincipal{
+        width: 100%;
+        height: 50vw;
+    }
+    #WpW {
+        padding-left: 3vw;
+        font-size: 3.5vw;
+        height: 6.5vw;
+        font-style: italic;
+    }
+    #FullWp{
+        width: 85%;
+        font-size: 3.3vw;
+        padding-left: 6vw;
+    }
+    
+    #svname, .authorname {
+        font-size: 1.5vw;
+        padding-left: 4vw;
+    }
+    #svMail, .authormail {
+        font-size: 2.8vw;
+        padding-left: 6vw;
+        position: relative;
+        top: -2vw;
+    }
+    #suw {
+        padding-left: 3vw;
+        font-size: 3.5vw;
+        height: 7.5vw;
+        font-style: italic;
+    }
+    
+    body{
+        background:url('../images/backgroundimages/cool-background.png');
+        background-repeat: repeat-y;
+        background-size: 100%;
+      }
+      
+    #home,#Checkdecission,#blg,#contactUS,#Community{
+        opacity: .5;
+        font-size:3.2vw ;
+        display: inline-block;
+    }
+    #about{
+        color: white;
+        opacity: 1;
+    }
+}
+

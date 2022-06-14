@@ -1,0 +1,488 @@
+
+@media only screen and (min-width: 1500px){
+    
+    #new_us_post_section{
+        display: flex;
+        flex-direction: column;
+    }
+    #about,#Checkdecission,#blg,#contactUS,#home{
+        opacity: .5;
+    }
+    textarea {
+        width: 40vw;
+        font-size: 1vw;
+        height: 10vw;
+        margin-top: 2vw;
+        margin-left: 2vw;
+        border: 0.1vw solid;
+    }
+    input#post {
+        width: 5vw;
+        font-size: 1vw;
+        position: relative;
+        top: -1.6vw;
+        left: 37.5vw;
+    }
+    
+    input[type="file"] {
+        font-size: 1vw;
+        margin-left: 2vw;
+        margin-top: 0.5vw;
+    }
+    .user_detail {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 1vw;
+    }
+    img.user_pic {
+        width: 3vw;
+        height: 3vw;
+        border-radius: 10vw;
+        margin-right: 1vw;
+        margin-left: 2vw;
+    }
+    .post_user_pic {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+    p.username {
+        font-size: 1.4vw;
+        font-weight: 800;
+        padding: 0;
+        margin: 0;
+    }
+    .all_post_pic {
+        width: 20vw;
+        height: 20vw;
+    }
+    .post_img_and_message_container {
+        margin-left: 5vw;
+    }
+    .post_data_class {
+        margin-bottom: 6vw;
+    }
+    hr {
+        border: 0.06vw solid;
+    }
+    p.aii_post_message {
+        font-size: 1.2vw;
+    }
+    .post_message {
+        width: 84%;
+    }
+    button#btn_toggle_hide {
+        margin-left: 2vw;
+        margin-top: 2vw;
+        width: 6vw;
+        height: 2vw;
+        font-size: 0.9vw;
+        font-weight: 800;
+        border: 0.1vw solid;
+        margin-bottom: 1.4vw;
+    }
+
+    div.comment_container {
+        width: 90%;
+        margin-left: 8vw;
+    }
+    div.comment_users {
+        display: flex;
+        flex-direction: row;
+    }
+    img.comment_user_class {
+        width: 2.7vw;
+        height: 2.7vw;
+        border-radius: 10vw;
+    }
+    div.comment_user {
+        font-size: 1.2vw;
+        font-weight: 800;
+        margin-left: 1vw;
+        display: flex;
+        flex-direction: row;
+    }
+    div.comment_pic {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    div.comment_text {
+        position: relative;
+        top: -0.5vw;
+    }
+    .new_comment_section {
+        display: flex;
+        margin-left: 8vw;
+        margin-top: 2vw;
+        flex-direction: column;
+    }
+    .input_comment_class {
+        width: 30vw;
+        height: 1vw;
+        font-size: 0.8vw;
+        padding: 0.8vw;
+        border: 0.1vw solid;
+    }
+    .btn_comment_class {
+        margin-top: 1vw;
+        margin-left: 2vw;
+        font-size: 0.8vw;
+        font-weight: 800;
+        height: 1.6vw;
+        width: 5vw;
+        position: relative;
+        left: 24.7vw;
+        top: -0.5vw;
+    }
+    p.comment_message_class {
+        font-size: 1vw;
+        margin: 0;
+        margin-left: 4vw;
+    }
+    .time_class {
+        font-size: 0.6vw;
+        padding: 0;
+        margin: 0;
+        color: green;
+        margin-left: 1.5vw;
+        margin-bottom: 0vw;
+        font-weight: 800;
+    }
+    span.time_comment {
+        font-size: 0.7vw;
+        color: green;
+        padding-top: 1.7vw;
+        padding-left: 0.5vw;
+    }
+}
+@media only screen and (min-width: 601px) and (max-width: 1499px) {
+
+    #new_us_post_section{
+        display: flex;
+        flex-direction: column;
+    }
+    #about,#Checkdecission,#blg,#contactUS,#home{
+        opacity: .5;
+    }
+    textarea {
+        width: 40vw;
+        font-size: 1vw;
+        height: 10vw;
+        margin-top: 2vw;
+        margin-left: 2vw;
+        border: 0.1vw solid;
+    }
+    input#post {
+        width: 5vw;
+        font-size: 1vw;
+        position: relative;
+        top: -1.6vw;
+        left: 37.5vw;
+    }
+    
+    input[type="file"] {
+        font-size: 1vw;
+        margin-left: 2vw;
+        margin-top: 0.5vw;
+    }
+    .user_detail {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 1vw;
+    }
+    img.user_pic {
+        width: 4vw;
+        height: 4vw;
+        border-radius: 10vw;
+        margin-right: 1vw;
+        margin-left: 2vw;
+    }
+    .post_user_pic {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+    p.username {
+        font-size: 1.4vw;
+        font-weight: 800;
+        padding: 0;
+        margin: 0;
+    }
+    .all_post_pic {
+        width: 26vw;
+        height: 27vw;
+    }
+    .post_img_and_message_container {
+        margin-left: 5vw;
+    }
+    .post_data_class {
+        margin-bottom: 6vw;
+    }
+    hr {
+        border: 0.06vw solid;
+    }
+    p.aii_post_message {
+        font-size: 1.2vw;
+    }
+    .post_message {
+        width: 84%;
+    }
+    button#btn_toggle_hide {
+        margin-left: 2vw;
+        margin-top: 2vw;
+        width: 6vw;
+        height: 2vw;
+        font-size: 0.9vw;
+        font-weight: 800;
+        border: 0.1vw solid;
+        margin-bottom: 1.4vw;
+    }
+
+    div.comment_container {
+        width: 90%;
+        margin-left: 8vw;
+    }
+    div.comment_users {
+        display: flex;
+        flex-direction: row;
+    }
+    img.comment_user_class {
+        width: 2.7vw;
+        height: 2.7vw;
+        border-radius: 10vw;
+    }
+    div.comment_user {
+        font-size: 1.2vw;
+        font-weight: 800;
+        margin-left: 1vw;
+        display: flex;
+        flex-direction: row;
+    }
+    div.comment_pic {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    div.comment_text {
+        position: relative;
+        top: -0.5vw;
+    }
+    .new_comment_section {
+        display: flex;
+        margin-left: 8vw;
+        margin-top: 2vw;
+        flex-direction: column;
+    }
+    .input_comment_class {
+        width: 30vw;
+        height: 1vw;
+        font-size: 0.8vw;
+        padding: 0.8vw;
+        border: 0.1vw solid;
+    }
+    .btn_comment_class {
+        margin-top: 1vw;
+        margin-left: 2vw;
+        font-size: 0.8vw;
+        font-weight: 800;
+        height: 1.6vw;
+        width: 5vw;
+        position: relative;
+        left: 24.7vw;
+        top: -0.5vw;
+    }
+    p.comment_message_class {
+        font-size: 1vw;
+        margin: 0;
+        margin-left: 4vw;
+    }
+    .time_class {
+        font-size: 0.6vw;
+        padding: 0;
+        margin: 0;
+        color: green;
+        margin-left: 1.5vw;
+        margin-bottom: 0vw;
+        font-weight: 800;
+    }
+    span.time_comment {
+        font-size: 0.7vw;
+        color: green;
+        padding-top: 1.7vw;
+        padding-left: 0.5vw;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #about,#Checkdecission,#blg,#contactUS,#home{
+        opacity: .5;
+        font-size:3.2vw ;
+        display: inline-block;
+    }
+    #Community{
+        opacity: 1;
+        color: white;
+    }
+    #new_us_post_section{
+        display: flex;
+        flex-direction: column;
+    }
+    textarea {
+        width: 71vw;
+        font-size: 2.5vw;
+        height: 18vw;
+        margin-top: 1vw;
+        margin-left: 2vw;
+        border: 0.1vw solid;
+    }
+    input#post {
+        width: 10vw;
+        height: 5vw;
+        font-size: 2.4vw;
+        position: relative;
+        top: -3.9vw;
+        left: 64vw;
+        font-weight: 800;
+    }
+    input[type="file"] {
+        font-size: 2.4vw;
+        margin-left: 2vw;
+        margin-top: 0.5vw;
+    }
+
+    .user_detail {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 1vw;
+    }
+    img.user_pic {
+        width: 11vw;
+        height: 11vw;
+        border-radius: 10vw;
+        margin-right: 1vw;
+        margin-left: 2vw;
+    }
+    .post_user_pic {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+    p.username {
+        font-size: 5.4vw;
+        font-weight: 800;
+        padding: 0;
+        margin: 0;
+        padding-left: 2vw;
+    }
+    .all_post_pic {
+        padding-left: 12vw;
+        padding-top: 2vw;
+        width: 36vw;
+        height: 36vw;
+    }
+    .post_img_and_message_container {
+        margin-left: 5vw;
+    }
+    .post_data_class {
+        margin-bottom: 6vw;
+    }
+    hr {
+        border: 0.06vw solid;
+    }
+    p.aii_post_message {
+        font-size: 3vw;
+        padding-left: 11.9vw;
+    }
+    .post_message {
+        width: 96%;
+    }
+    button#btn_toggle_hide {
+        margin-left: 2vw;
+        margin-top: 2vw;
+        width: 17vw;
+        height: 5vw;
+        font-size: 2.5vw;
+        font-weight: 800;
+        border: 0.1vw solid;
+        margin-bottom: 1.4vw;
+    }
+    div.comment_container {
+        width: 90%;
+        margin-left: 8vw;
+    }
+    div.comment_users {
+        display: flex;
+        flex-direction: row;
+    }
+    img.comment_user_class {
+        width: 6.5vw;
+        height: 6.5vw;
+        border-radius: 10vw;
+        margin-left: 4vw;
+    }
+    div.comment_user {
+        font-size: 3.5vw;
+        font-weight: 800;
+        margin-left: 1vw;
+        display: flex;
+        flex-direction: row;
+    }
+    div.comment_pic {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    div.comment_text {
+        position: relative;
+        top: -0.5vw;
+    }
+    .new_comment_section {
+        display: flex;
+        margin-left: 8vw;
+        margin-top: 2vw;
+        flex-direction: column;
+    }
+    .input_comment_class {
+        width: 66vw;
+        height: 3vw;
+        font-size: 2.8vw;
+        padding: 0.8vw;
+        border: 0.1vw solid;
+        margin-left: 6vw;
+    }
+    .btn_comment_class {
+        margin-top: 2vw;
+        margin-left: 2vw;
+        font-size: 3vw;
+        font-weight: 800;
+        height: 5.6vw;
+        width: 17vw;
+        position: relative;
+        left: 55vw;
+        top: -0.5vw;
+    }
+    p.comment_message_class {
+        font-size: 2.8vw;
+        margin: 0;
+        margin-left: 15vw;
+    }
+    .time_class {
+        font-size: 2.5vw;
+        padding: 0;
+        margin: 0;
+        color: green;
+        margin-left: 7.7vw;
+        margin-bottom: 0vw;
+        font-weight: 800;
+    }
+    span.time_comment {
+        font-size: 2.2vw;
+        color: green;
+        padding-top: 4.856vw;
+        padding-left: 1.5vw;
+        position: relative;
+        top: -0.3vw;
+    }
+}
+

@@ -1,0 +1,162 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        title Contact US
+        link(rel="shortcut icon" href="../images/coffee\ leaf\ deseasies\ detection.png") 
+        style 
+            include ../css/contact.css
+            include ../css/footer.css
+            include ../css/navigation.css
+    body
+        -var user='null'
+        -var Pass='null'
+        -if(mail)
+            -user=mail
+        -if(Password)
+            -Pass=Password
+        div(id='userprofile' onclick="window.location='/userprofile'")
+            img(id="img_id_for_user" src=userpic)
+
+        div(id='navigation_right' style='display:none') 
+            .alinkr.alink
+                a(href="/?username="+user+"&Password="+Pass) Home 
+            .alinkr.alink
+                a(href="/about?username="+user+"&Password="+Pass) About
+            .alinkr.alink
+                a(href="/checkde?username="+user+"&Password="+Pass) Check-Leaf
+            .alinkr.alink
+                a(href="/bloge?username="+user+"&Password="+Pass) Blog
+            .alinkr.alink 
+                a(href="/community?username="+user+"&Password="+Pass) Community
+            .alinkr.alink
+                a(href="/contactus?username="+user+"&Password="+Pass) Report
+            .alinkr.alink
+                a(href="/userprofile?username="+user+"&Password="+Pass) User LogIn
+            #profilePic   
+                img(id="img_id_for_user_navi_R" src=userpic)
+
+        #NeviGationbarContainer
+            #icon.alink
+            #home.alink
+                a(href="/?username="+user+"&Password="+Pass) Home
+            #about.alink
+                a(href="/about?username="+user+"&Password="+Pass) About
+            #Checkdecission.alink
+                a(href="/checkde?username="+user+"&Password="+Pass) Check-Leaf
+            #blg.alink
+                a(href="/bloge?username="+user+"&Password="+Pass) Blog
+            #Community.alink 
+                a(href="/community?username="+user+"&Password="+Pass) Community
+            #contactUS.alink 
+                a(href="/contactus?username="+user+"&Password="+Pass) Report
+
+            #dots
+                div(id='dot1' class='dotclass' onclick='toggle_hide_navigation()')
+                div(id='dot2' class='dotclass' onclick='toggle_hide_navigation()') 
+                div(id='dot3' class='dotclass' onclick='toggle_hide_navigation()')
+                div(id='dot4' class='dotclass' onclick='toggle_hide_navigation()')
+
+        #cotain_chatbox_and_report_section_
+            #contactContainer
+                form( name="report" action="/reportProbem" method="POST" onSubmit="return aleart(event)")
+                    #box0 
+                        span(id='box00') Report
+                    #box1
+                        .label
+                            span Email
+                        .input
+                            input(type="email" id="email" name="email" required)
+
+                    #box2
+                        .label 
+                            span(for="subject") Subject 
+                        .input
+                            input(type="text" id="subject" name="subject" required)
+
+                    #box3
+                        .label
+                            span In Detail 
+                        .input
+                            textarea(name="indetail" class ="indetail") 
+
+                    #Suggestion
+                        #checkboxs
+                            span Suggestion
+                        #checkbox
+                            input(type="checkbox" id="Show" onchange="toggleCheckbox(this)")
+                    #showbox 
+                        textarea(name="sugg" id ="showorhidden") 
+                    #box4 
+                        button#btn Submitt
+
+
+            <!-- Messenger Chat Plugin Code -->
+            <div id="fb-root"></div>
+
+            <!-- Your Chat Plugin code -->
+            <div id="fb-customer-chat" class="fb-customerchat"></div>
+        <script> var chatbox = document.getElementById('fb-customer-chat'); chatbox.setAttribute("page_id", "110733434487077"); chatbox.setAttribute("attribution", "biz_inbox"); </script>
+        <!-- Your SDK code -->
+        <script> window.fbAsyncInit = function() {FB.init({xfbml            : true, version          : 'v13.0'});};(function(d, s, id) {var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) return;js = d.createElement(s); js.id = id;js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script>
+
+
+        #footer
+            #row
+                #blogs(onclick="location.href='/bloge'")
+                    #blogcon 
+                        h1 Blogs
+                    #first3blogs
+                        -var flag=0
+                        each n in records.reverse()
+                            span=n.title
+                            -flag=flag+1
+
+                            if(flag==3)
+                                -break
+                            else 
+                                
+                #contus 
+                    #contcon
+                        h1 Contact US
+                    #info1 
+                        h1 chillofficialop@gmail.com
+                    #info2 
+                        h1 +8801400298344
+                    #info3
+                        h1 +8801989890916
+                #fllowus
+                    #flus
+                        h1 Follow US  
+                        //- edit link
+                    #icon1.ic(onclick="location.href='https://twitter.com/LeafRobust'")  
+                    #icon2.ic(onclick="location.href='https://www.linkedin.com/in/robusta-coffee-leaf-disease-detection-a03633231'")
+                    #icon3.ic(onclick="location.href='https://www.instagram.com/invites/contact/?i=ww811g5p6egd&utm_content=nxqvycp'")
+                    #icon4.ic(onclick="location.href='https://www.facebook.com/Robust-Coffee-Leaf-Disease-Detection-110733434487077/?ref=pages_you_manage'")
+            #copyrigth 
+                h1 All right reserve's to ::chillofficialop@gmail.com ::2022
+
+
+
+        script(type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js") 
+        script 
+            include ../js/contactus.js
+            include ../js/dots.js
+
+
+        script(src="//cdn.jsdelivr.net/npm/sweetalert2@10")
+        script(src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous") 
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous")
+        script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous") 
+        script(src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous")
+

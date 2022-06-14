@@ -1,0 +1,198 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        title Control Panal 
+        link(rel="shortcut icon" href="../images/coffee\ leaf\ deseasies\ detection.png")
+        style 
+            include ../css/apanal.css
+            include ../css/pictureuploadefile.css
+            include ../css/Admin_community.css
+
+    body
+        #adminpanalText 
+            #text
+                span(id="aptx") Admin Panal 
+            #btnshow
+                #btn1_for_show_blogs.btnclass_div
+                    button(id='btnblogs' class="btnclass" onclick="showblogs()") Blog
+                #btn2_for_show_report.btnclass_div
+                    button(id="btnreport" class="btnclass" onclick='showreports()') Report
+                #btn3_for_show_report.btnclass_div
+                    button(id="btnshowpicture" class="btnclass" onclick='showpicture()') Images
+                #btn4_for_show_report.btnclass_div
+                    -if(admin)
+                        button(id="btnshowAdmins" class="btnclass" onclick='showAdmis()') Admin-List
+                #btn5_for_show_community_div.btnclass_div
+                    button(id="community_navigation_btn" class="btnclass" onclick='show_community()') Community
+        #newPost 
+            #inputtext
+                button(id="npbtn" onclick="newpostfile()") New Post
+                #formfile
+                    form(action="/newpostrequest" method="POST" enctype="multipart/form-data" onSubmit="return aleart2(event)" name="nf")
+                        #title_d
+                            input(type="text" id="title" placeholder="Title" name="title" required)
+                        #textArea
+                            textarea(name="newposttext" id ="wpa" placeholder="Write post Area" required) 
+                        #picfileandbtn
+                            #file
+                                input(type="file" name="myimg" accept="image/s*" id ='pic' required) 
+                            #buttoncancleAndSubmit
+                                button(id="npbtncancle" onclick="newpostfileCancle()") Cancel
+                                input(type="submit" value="Post" id="Blog_post")
+        //- design for show blogs
+        #blogshowhide(loading="lazy")
+            -var i=0
+            each n in records.reverse()
+                hr
+                span(id="deletemessage"+i)
+                div(id="blogs"+i class='blogs')
+                    #displayiclumn
+                        #showtitle
+                            span(id="title"+i class="alltitle")=n.title
+                    #photos
+
+                        #show_in_dtail
+                            span(id="indetail"+i class="showindetail_")=n.newposttext
+                        #pic_blog
+                            img(class='blogphoto' src=n.myimg id="pic"+i)
+                #update_and_delete 
+                    #delete 
+                        button(id="delete_element_"+i class="delete_element" onclick="delete_element(this.value,"+i+")"  value=n._id) Delete
+
+                    -i=i+1
+
+
+        //- designing for show report's 
+        #reportshowhide(style="display:none")
+            if(reports_records)
+                each i in reports_records.reverse()
+                    #reportshow 
+                        #displayclumn2
+                            #show_subject
+                                span=i.subject
+                            #show_indetail.show_indetail_class
+                                span=i.indetail
+                            #show
+                                -if (i.sugg.length==1)
+                                    //- span <strong class="sugg_underline">Suggestion</strong> -------------------
+                                -else
+                                    span <strong class="sugg_underline ::">Suggestion</strong> #{i.sugg}
+                            #show_email
+                                span=i.email
+                    hr
+
+
+        //-design for show pictures and uploads picture in gallery
+        #add_pic_in_gallery(style="display:none")  
+            button( id="btn_for_show_gallery_thumbnail" onclick="show_gallery_thumbnail()") Upload New Pic
+        #hideandshow(style="display:none")  
+            #dragAdnDropArea
+                form(method="post" onSubmit="return aleartandsenddata(event)" enctype="multipart/form-data") 
+                    .drop-zone
+                        span(class="drop-zone__prompt") Drop file here or click to upload
+                        input(type="file" name="myFile" class="drop-zone__input" id="picc" accept="image/png, image/jpeg" required)
+                    #submit
+                        button(id="btn_gallery") Submitt
+
+
+        #showandhide_pic_records(style="display:none")
+            -if(reports_records)
+                -var i= 0
+                each n in pic_records.reverse()
+                    hr
+                    span(id="deletemessage_in_pic_div"+i)
+                    div(id="div_pic_show"+i)
+                        img(class='blogphoto' src=n.name, alt="")
+                        h1(class="picname")=n.picname
+                        button(id="delete_pic"+i class="delete_element" onclick="delete_pic(this.value,"+i+")"  value=n._id) Delete
+                        -i=i+1
+
+        //-design for show Admin list
+        #show_Admin_List(style="display:none")
+            -if(admin)
+                -var i= 0
+                each n in admin
+                    -if(!n.subadmin)
+                        h1(id='deletemessage_in_admin_div'+i)
+                        div(id="admin_box_"+i class='admin_box_class') 
+                            p.authorinfo Gmail <strong>#{n.gmail}</strong>
+                            p.authorinfo Username <strong>#{n.username}</strong>
+                            p.authorinfo Password <strong>#{n.Password}</strong>
+                            button(id="delete_author"+i class="delete_author" onclick="remove_author(this.value,"+i+")" value=n._id) Remove Author
+                        hr
+                        -i = i+1
+
+        //-design for show community
+        #community_control(style="display:none" loading="lazy")
+            if(post_data)
+                -var i=0;
+                -var c=0;
+                -var k=''
+                each n in post_data.reverse()
+                    div(class='delete_post_message' id='delete_post_message'+i style="display:none")
+                    div(class='post_data_class' id='post_data_class'+i)
+                        .user_detail
+                            .post_user_pic
+                                img(class='user_pic' src=n.userpic)
+                            .post_user_name 
+                                p(class='username') @#{n.username}
+                                -if(n.time)
+                                    p(class='time_class')=n.time
+
+                        .post_img_and_message_container 
+                            -if(n.pic)
+                                if(n.pic!='null')
+                                    .post_pic
+                                        img(class='all_post_pic' src=n.pic)
+                            .post_message
+                                p(class='aii_post_message')=n.text
+                        .Delete 
+                            button(id='delete_community_post' class="delete_community_post_class" onclick="remove_community_post(this.value,"+i+")" value=n._id) Post Delete
+
+
+                        //- comment Section
+                        div(id='all_comment'+i)
+                            -if(n.comment)
+                                -k=n.id
+                                    each eachcomment in n.comment
+                                        div(class='deletemessage' id='comment_dlt_ms_sh'+c style="display:none")
+                                        div(class='comment_container' id='eachcomment_box'+c)
+                                            .comment_users
+                                                .comment_pic
+                                                    img(class='comment_user_class' src=eachcomment.comment_user_pic)
+                                                .comment_user
+                                                    p(class='comment_user_name') @#{eachcomment.comment_username}
+                                                    <span class='time_comment'>#{eachcomment.time}</span>
+                                            .comment_text
+                                                p(class='comment_message_class')=eachcomment.comment_user_text
+                                            .commet_remove_div
+                                                button(id='delete_community_comment' class="delete_community_comment_class" onclick="remove_community_comment_(this.value, "+c+")" value=n._id+'||'+eachcomment._id ) Delete Comment
+                                                -c=c+1
+
+                        -i=i+1
+                    hr
+
+
+        script 
+            include ../js/adminpicuploade.js
+            include ../js/admincontrol.js
+            include ../js/checkdes.js
+            include ../js/deteteAndUpdate.js
+            include ../js/admin_community_delete.js
+        script(src="//cdn.jsdelivr.net/npm/sweetalert2@10")
+        script(src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous") 
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous")
+        script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous") 
+        <script>if ( window.history.replaceState ) {window.history.replaceState( null, null, window.location.href);}</script>
+        //- script(src="https://code.jquery.com/jquery-3.4.1.min.js"
+        //-     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        //-     crossorigin="anonymous")

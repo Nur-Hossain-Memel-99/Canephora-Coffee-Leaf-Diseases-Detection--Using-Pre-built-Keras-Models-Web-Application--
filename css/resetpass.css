@@ -1,0 +1,120 @@
+
+
+@media only screen and (min-width: 601px) {
+    body,html{
+        width: 100%;
+        height: 100%;
+        background: url('../images/backgroundimages/reset-background.jpg');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    div#mialsection, #Confirmation, #password{
+        display: flex;
+        flex-direction: column;
+    }
+    p#mail,p#cnfmtion, p#firspass, p#firspass{
+        font-size: 1.4vw;
+        font-weight: 800;
+    }
+    input#user_mail_id, #confirmation_input_id, #newpassword, #reinterpassword {
+        width: 26vw;
+        height: 1.8vw;
+        font-size: 1.1vw;
+        border: 0.1vw solid;
+    }
+    button#submit_usermail_id, button#submit_conf_id{
+        font-size: 1.3vw;
+        width: 7.5vw;
+        font-weight: 800;
+        margin-top: 0.5vw;
+        position: relative;
+        left: 18.9vw;
+        border: 0.1vw solid;
+    }
+    button#submit_pass_id {
+        position: relative;
+        top: 4vw;
+        left: -7.4vw;
+        font-size: 1.3vw;
+        width: 7.5vw;
+        font-weight: 800;
+        margin-top: 0.5vw;
+        border: 0.1vw solid;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    body,html{
+        width: 100%;
+        height: 100%;
+        background: url('../images/backgroundimages/reset-background.jpg');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    div#mialsection, #Confirmation, #password{
+        display: flex;
+        flex-direction: column;
+    }
+    p#mail, p#cnfmtion, p#firspass, p#firspass {
+        font-size: 4vw;
+        font-weight: 800;
+    }
+    input#user_mail_id, #confirmation_input_id, #newpassword, #reinterpassword {
+        width: 51vw;
+        height: 5.8vw;
+        font-size: 3vw;
+        border: 0.2vw solid;
+    }
+    button#submit_usermail_id, button#submit_conf_id {
+        font-size: 3vw;
+        width: 16.5vw;
+        font-weight: 800;
+        margin-top: 0.5vw;
+        position: relative;
+        left: 35.9vw;
+        border: 0.1vw solid;
+    }
+    button#submit_usermail_id:hover, button#submit_conf_id:hover {
+        position: relative;
+        left: 36.3vw;
+        top: 0.4vw;
+    }
+    button#submit_usermail_id:active, button#submit_conf_id:active {
+        position: relative;
+        left: 36.6vw;
+        top: 0.7vw;
+    }
+    button#submit_pass_id {
+        position: relative;
+        top: 7vw;
+        left: -16.7vw;
+        font-size: 3vw;
+        width: 16.5vw;
+        font-weight: 800;
+        margin-top: 0.5vw;
+        border: 0.1vw solid;
+    }
+    button#submit_pass_id:hover{
+        position: relative;
+        top: 7.3vw;
+        left: -17vw;
+    }
+    button#submit_pass_id:active{
+        position: relative;
+        top: 7.6vw;
+        left: -17.3vw;
+    }
+
+}
